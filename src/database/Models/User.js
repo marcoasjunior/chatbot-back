@@ -2,30 +2,13 @@ const mongoose = require('../mongoose')
 
 const UserSchema = new mongoose.Schema({
 
-    email: {
+    name: {
         type: String,
-        unique: true,
-        require: true,
-        lowercase: true
+        require: true
     },
 
-    password: {
-        type: String,
-        require: true,
-    },
-
-    address: {
-        type: String,
-        require: true,
-    },
-
-    address2: {
-        type: String,
-        require: true,
-    },
-
-    district: {
-        type: String,
+    cpf: {
+        type: Number,
         require: true,
     },
 
@@ -37,23 +20,6 @@ const UserSchema = new mongoose.Schema({
     uf: {
         type: String,
         require: true,
-    },
-
-    cep: {
-        type: Number,
-        require: true,
-    },
-
-    symptoms: {
-        type: [String],
-    },
-
-    groups: {
-        type: [String],
-    },
-
-    result: {
-        type: Boolean
     }
 
 }, {

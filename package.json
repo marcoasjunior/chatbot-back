@@ -1,0 +1,33 @@
+{
+  "name": "chatbot-back",
+  "version": "1.0.0",
+  "description": "chatbot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcoasjunior/chatbot-back.git"
+  },
+  "keywords": [
+    "chat",
+    "chatbot"
+  ],
+  "author": "Marco Antônio da Silva Júnior",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcoasjunior/chatbot-back/issues"
+  },
+  "homepage": "https://github.com/marcoasjunior/chatbot-back#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "firebase": "^7.14.1",
+    "mongoose": "^5.9.9"
+  }
+}

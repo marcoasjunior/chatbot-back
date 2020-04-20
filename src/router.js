@@ -1,9 +1,10 @@
 const express = require('express')
 const router = express()
-const BotController = require('./controllers/BotController')
 const QnAController = require('./controllers/QnAController')
 const UserController = require('./controllers/UserController')
+const cors = require('cors')
 
+router.use(cors())
 
 router.get('/messages/2', function(req, res) {
     res.json('estou vivo!')

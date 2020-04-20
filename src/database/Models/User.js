@@ -12,12 +12,12 @@ const UserSchema = new mongoose.Schema({
         require: true,
     },
 
-    city: {
+    email: {
         type: String,
         require: true,
     },
 
-    uf: {
+    password: {
         type: String,
         require: true,
     }

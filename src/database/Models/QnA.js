@@ -10,7 +10,12 @@ const QnASchema = new mongoose.Schema({
     question: {
         type: String,
         require: true,
-    }
+    },
+
+    type: {
+        type: String,
+        require: true,
+    },
 
 }, {
     timestamps: true,

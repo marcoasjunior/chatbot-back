@@ -7,6 +7,7 @@ module.exports = {
         let qna = new QnA({
             step: req.body.step,
             question: req.body.question,
+            type: req.body.type,
 
         })
 

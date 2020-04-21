@@ -17,6 +17,10 @@ const QnASchema = new mongoose.Schema({
         require: true,
     },
 
+    multiChoices: {
+        type: Array
+    }
+
 }, {
     timestamps: true,
     versionKey: false

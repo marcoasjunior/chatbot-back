@@ -8,6 +8,7 @@ module.exports = {
             step: req.body.step,
             question: req.body.question,
             type: req.body.type,
+            multiChoices: req.body.multiChoices
 
         })
 

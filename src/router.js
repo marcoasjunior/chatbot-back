@@ -39,7 +39,7 @@ router.post('/user', celebrate({
     [Segments.BODY]: Joi.object().keys({
         name: Joi.string().alphanum().min(3).max(30).required(),
         email: Joi.string().required().email(),
-        whatsapp: Joi.string().required().min(10).max(11),
+        whatsapp: Joi.string().min(10).max(11),
         password: Joi.string().required(),
         cpf: Joi.number().required()
     })

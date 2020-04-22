@@ -10,16 +10,25 @@ const UserSchema = new mongoose.Schema({
     cpf: {
         type: Number,
         require: true,
+        unique: true
     },
 
     email: {
         type: String,
+        require: true,
+        unique: true
+    },
+
+    whatsapp: {
+        type: Number,
         require: true,
     },
 
     password: {
         type: String,
         require: true,
+        max: 14,
+        min: 6
     }
 
 }, {

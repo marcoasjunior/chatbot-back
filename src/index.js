@@ -2,6 +2,8 @@ const express = require('express')
 const app = express()
 const port = process.env.PORT || 3333
 const router = require('./router')
+const passport = require('passport')
+const Strategy = require('./utils/passport')
 
 
 // Express configs
@@ -16,6 +18,10 @@ app.use(express.json())
 // Routes 
 
 app.use('/api', router)
+
+// Auth
+
+passport.use(Strategy)
 
 // Server
 

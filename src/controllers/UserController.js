@@ -21,4 +21,41 @@ module.exports = {
                 return res.json(err)
             })
     },
+
+    async find(req, res) {
+
+        let id = req.params.userId
+
+        User.find({_id: id}, (err, response) => {
+
+            if (err) return res.json(err)
+
+            console.log(response)
+
+            res.json(response)
+
+        })
+    },
+
+    async update(req, res) {
+
+        const {id, name, email, whatsapp, password} = req.body
+
+        User.findByIdAndUpdate(id, {
+            name: name,
+            email: email,
+            password: password,
+            whatsapp: whatsapp
+
+        }, (err, response) => {
+
+            if (err) return res.json(err)
+
+            console.log(response)
+
+            res.json(response)
+
+        })
+    },
+
 }

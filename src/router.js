@@ -11,15 +11,19 @@ router.get('/messages/2', function(req, res) {
     res.json('estou vivo!')
 })
 
+
 router.get('/question/:step', QnAController.find)
+router.get('/appointment/:userId', AppointmentController.find)
+router.get('/user/:userId', UserController.find)
 
 // Criar Pergunta
 
 router.post('/qna', QnAController.create)
 
-// Criar Usuário
+// Usuário
 
 router.post('/user', UserController.create)
+router.post('/user/update', UserController.update)
 
 // Criar Compromisso
 

@@ -1,4 +1,5 @@
 const mongoose = require('../mongoose')
+var uniqueValidator = require('mongoose-unique-validator')
 
 const UserSchema = new mongoose.Schema({
 
@@ -36,6 +37,9 @@ const UserSchema = new mongoose.Schema({
     versionKey: false
 })
 
+UserSchema.plugin(uniqueValidator)
+
 const User = mongoose.model('User', UserSchema, 'users')
+
 
 module.exports = User

@@ -1,5 +1,6 @@
 const User = require('../database/Models/User')
 
+
 module.exports = {
 
     async create(req, res) {
@@ -47,7 +48,7 @@ module.exports = {
             password: password,
             whatsapp: whatsapp
 
-        }, (err, response) => {
+        }, { runValidators: true, context: 'query' }, (err, response) => {
 
             if (err) return res.json(err)
 

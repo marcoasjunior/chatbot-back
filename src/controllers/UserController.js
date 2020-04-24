@@ -27,7 +27,7 @@ module.exports = {
 
         let id = req.params.userId
 
-        User.find({_id: id}, (err, response) => {
+        User.findById(id, (err, response) => {
 
             if (err) return res.json(err)
 
